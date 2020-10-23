@@ -5,10 +5,9 @@ serverSocket = socket(AF_INET, SOCK_DGRAM)
 serverSocket.bind(("", serverPort))
 
 print('Servidor pronto para receber.')
+print('Aguardando...')
 
 while True:
-
-    print('Aguardando...')
 
     message, clientAddress = serverSocket.recvfrom(2048)
     messageDecoded = message.decode()

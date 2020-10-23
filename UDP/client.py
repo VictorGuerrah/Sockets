@@ -7,7 +7,7 @@ clientSocket = socket(AF_INET, SOCK_DGRAM)
 message = input('Digite a operação aritmética:')
 clientSocket.sendto(message.encode(), (serverName, serverPort))
 
-print("Esperando resposta do serivdor...")
+print("Esperando resposta do servidor...")
 
 responseMessage, serverAddress = clientSocket.recvfrom(2048)
 
